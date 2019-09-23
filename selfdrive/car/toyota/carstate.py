@@ -117,7 +117,7 @@ class CarState(object):
 
     self.door_all_closed = not any([cp.vl["SEATS_DOORS"]['DOOR_OPEN_FL'], cp.vl["SEATS_DOORS"]['DOOR_OPEN_FR'],
                                     cp.vl["SEATS_DOORS"]['DOOR_OPEN_RL'], cp.vl["SEATS_DOORS"]['DOOR_OPEN_RR']])
-    self.seatbelt = not cp.vl["SEATS_DOORS"]['SEATBELT_DRIVER_UNLATCHED']
+    self.seatbelt = 0
 
     self.brake_pressed = cp.vl["BRAKE_MODULE"]['BRAKE_PRESSED']
     if self.CP.enableGasInterceptor:
